@@ -1,0 +1,17 @@
+# Python / Pyenv
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+.pyenv/
+
+# dbt
+target/
+dbt_packages/
+logs/
+profiles.yml
+
+# Ambientes / IDE
+.env
+.vscode/
+.DS_Store
