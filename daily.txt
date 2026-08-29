@@ -3,7 +3,7 @@
 - Clone do projeto no terminal VSCode: ok
 - Criação do arquivo daily.txt
 - Instalação do Python 3.11.15 via pyenv: ok
-- Criação do ambiente virtaul Python: ok
+- Criação do ambiente virtual Python: ok
 # 1. Crie o ambiente virtual
 pyenv virtualenv 3.11.15 dbt-env
 
@@ -17,9 +17,17 @@ pip install --upgrade pip
 # 1. Cria o arquivo requirements.txt
 echo "dbt-databricks" > requirements.txt
 
-- Instala o dbt e as dependências para o Databricks
+- Instala o dbt e as dependências para o Databricks: ok
 # 2. Instala as dependências a partir do arquivo
 pip install -r requirements.txt
 
 - Inicializa o projeto dbt
 dbt init dbt_databricks --skip-profile-setup
+
+- Configuração e teste de conexão:
+  * Criação do arquivo ~/.dbt/profiles.yml apontando para o Databricks: ok
+  * Execução de dbt debug (All checks passed!): ok
+
+- Ajuste de nomenclatura e primeira execução:
+  * Renomeado nome do projeto em dbt_project.yml para dbt_databricks_project: ok
+  * Execução do dbt run com sucesso no Databricks (tabela e view criadas): ok
