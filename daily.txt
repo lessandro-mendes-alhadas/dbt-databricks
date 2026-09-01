@@ -31,3 +31,16 @@ dbt init dbt_databricks --skip-profile-setup
 - Ajuste de nomenclatura e primeira execução:
   * Renomeado nome do projeto em dbt_project.yml para dbt_databricks_project: ok
   * Execução do dbt run com sucesso no Databricks (tabela e view criadas): ok
+
+=== 31/08/2026
+- Configuração do ecossistema GCP (BigQuery):
+  * Criação do projeto e dataset trusted_zone no BigQuery: ok
+  * Ingestão de amostragem semi-estruturada (GA Sessions com JSON/hits): ok
+  * Criação da Service Account e exportação da chave JSON: ok
+
+- Integração BigQuery -> Databricks:
+  * Organização no Databricks: criação da pasta 'DBT-Databricks' e notebook 'Carrega_a_tabela_Trusted_do_BigQuery': ok
+  * Estruturação de Governança: criação do volume 'dbt-databricks-volume' em 'dbt-databricks-catalog.default': ok
+  * Upload da chave de serviço da GCP no volume do Databricks: ok
+  * Criação do schema 'model_schema' para centralizar os dados e modelos do projeto: ok
+  * Leitura dos dados do BigQuery via Spark Connector e persistência da tabela Delta no schema 'model_schema': ok
